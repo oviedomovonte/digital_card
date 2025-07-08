@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card */
+.card {
+  background-color: #1C30BD;
+  width: 100%;
+  max-width: 320px; /* Adjusted to make the card narrower */
+  height: auto;
+  padding: 0; /* Removed padding to make the image touch the edges */
+  margin: 20px 0; /* Margin above and below to prevent touching the edges */
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; /* Ensure content stays within rounded corners */
+}
+
+/* Imagen */
+.profile-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block; /* Ensure it fills the container */
+}
+
+/* Información */
+.info {
+  padding: 20px; /* Added padding to the info section */
+}
+
+.info h1 {
+  color: #fff;
+  font-size: 24px;
+  margin-top: 16px;
+  text-align: left;
+}
+
+.info h2 {
+  color: #69AAFF;
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 4px;
+  text-align: left;
+}
+
+/* Lista de datos de contacto */
+.contact-info {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff;
+  font-size: 14px;
+  margin-bottom: 10px;
+  padding: 0 20px; /* Added padding to contact-info items */
+}
+
+.contact-info svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* Remove underline and change color for phone number links */
+.contact-info a {
+  color: #ffffff; /* Change the color to white */
+  text-decoration: none; /* Remove underline */
+}
+
+.contact-info a:hover {
+  text-decoration: underline; /* Optional: Add underline on hover */
+}
+
+/* Botón */
+.save-btn {
+  background-color: #69AAFF;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  font-size: 14px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  margin: 20px; /* Added margin to separate the button from the edges */
+}
+
+.save-btn:hover {
+  transform: scale(1.05); /* Keeps the hover effect */
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 320px) {
+  .card {
+    width: 100vw;
+    margin: 10px; /* Small margin on mobile to prevent touching the edges */
+    border-radius: 0;
+  }
+}
+
+.info h1,
+.info h2 {
+  text-align: right;
+}
